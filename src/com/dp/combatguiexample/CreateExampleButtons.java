@@ -1,7 +1,7 @@
 package com.dp.combatguiexample;
 
-import com.dp.advancedgunnerycontrol.combatgui.buttongroups.CreateButtonsAction;
-import com.dp.advancedgunnerycontrol.combatgui.buttongroups.DataButtonGroup;
+import com.dp.magiccombatgui.buttongroups.CreateButtonsAction;
+import com.dp.magiccombatgui.buttongroups.DataButtonGroup;
 import org.jetbrains.annotations.NotNull;
 
 public class CreateExampleButtons implements CreateButtonsAction {

@@ -1,8 +1,8 @@
 package com.dp.combatguiexample;
 
-import com.dp.advancedgunnerycontrol.combatgui.GuiBase;
-import com.dp.advancedgunnerycontrol.combatgui.buttongroups.CreateSimpleButtons;
-import com.dp.advancedgunnerycontrol.combatgui.buttongroups.RadioButtonRefreshAction;
+import com.dp.magiccombatgui.GuiBase;
+import com.dp.magiccombatgui.buttongroups.CreateSimpleButtons;
+import com.dp.magiccombatgui.buttongroups.RadioButtonRefreshAction;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Arrays;
