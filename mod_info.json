@@ -1,13 +1,12 @@
 {
-    "id": "yourName_uniqueid",
-    "name": "starsector-gradle-template",
-    "author": "Your Name",
+    "id": "testCombatGui_test",
+    "name": "Combat GUI test",
+    "author": "DesperatePeter",
     "utility": "false",
     "version": { "major":"1", "minor": "0", "patch": "0" },
-    "description": "Mod description.",
+    "description": "Test/Showcase for using combat GUI",
     "gameVersion": "0.95.1a-RC6",
-    "jars":["jars/starsector-gradle-template.jar"],
-    "modPlugin":"com.example.ExampleModPlugin",
+    "jars":["jars/TestCombatGui.jar"],
     "dependencies": [
         {
             "id": "lw_lazylib",

@@ -7,13 +7,13 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
  * The name of your mod. Used to create a mod folder name (and the name of your mod, if using auto-updated mod_info.json).
  * Defaults to the name of the mod's folder.
  */
-val modName = rootDir.name
+val modName = "TestCombatGui"
 
 /**
  * Where your Starsector game is installed to.
  * Note: On Linux, if you installed Starsector into your home directory, you have to write /home/<user>/ instead of ~/
  */
-val starsectorDirectory = "C:/Program Files (x86)/Fractal Softworks/Starsector"
+val starsectorDirectory = "D:/Spiele/Starsector"
 
 /** Defaults to the name of your mod, with spaces replaced by hyphens. */
 val modFolderName = modName.replace(" ", "-")

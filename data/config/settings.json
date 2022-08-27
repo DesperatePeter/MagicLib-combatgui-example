@@ -1,7 +1,7 @@
 {
-#     "plugins":{
-#         "ML_fakeBeamPlugin":"data.scripts.plugins.MagicFakeBeamPlugin",
-#     },
+     "plugins":{
+         "ExampleCombatGuiLauncher":"com.dp.combatguiexample.ExampleCombatGuiLauncher",
+     },
 # 
 #     "graphics":{
 # 		"character":{
