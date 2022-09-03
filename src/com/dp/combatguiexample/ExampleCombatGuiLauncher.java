@@ -1,6 +1,6 @@
 package com.dp.combatguiexample;
 
-import com.dp.magiccombatgui.*;
+import com.dp.advancedgunnerycontrol.combatgui.*;
 import org.jetbrains.annotations.NotNull;
 
 // If you already have a BaseEveryFrameCombatPlugin in your mod, consider implementing the functionality in that

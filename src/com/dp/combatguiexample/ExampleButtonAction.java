@@ -1,6 +1,6 @@
 package com.dp.combatguiexample;
 
-import com.dp.magiccombatgui.buttons.ButtonAction;
+import com.dp.advancedgunnerycontrol.combatgui.buttons.ButtonAction;
 import com.fs.starfarer.api.Global;
 
 public class ExampleButtonAction implements ButtonAction {
