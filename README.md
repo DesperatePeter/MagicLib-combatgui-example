@@ -1,5 +1,7 @@
 # Combat GUI example
 
+![Showcase](imgs/combatGuiLibUsageExample.gif)
+
 A simple example showcasing how to use the combat GUI lib.
 
 The relevant files are everything in src and data/config/settings.json.
