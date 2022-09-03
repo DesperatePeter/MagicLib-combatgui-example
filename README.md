@@ -10,6 +10,8 @@ To see what the example GUI does, load this mod, enter combat and press the '+'-
 
 1. Include AGC as a dependency in your mod_info.json
    1. Load AdvancedGunneryControl.jar as a library. If you are using Wisp's template (which I highly recommend), this will happen automatically.
+   2. If you don't want your mod to have AGC as a dependency, I am also fine with you copy-pasting the combat gui lib into your mod, but please change the package name in that case (to avoid version conflicts).
+      1. Don't forget to comply with the license in that case. As it's MIT-licensed, that should be easy enough, you just have to include the license notice in your mod.
 2. Create a new class that extends com.dp.advancedgunnerycontrol.combatgui.GuiBase
    1. Override the method getTitleString with a title to display when the GUI is opened
    2. (optional) Override getMessageString if you want to display general messages. Feel free to put logic in here that changes the message based on context
