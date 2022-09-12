@@ -66,6 +66,7 @@ dependencies {
     implementation("net.java.jinput:jinput:2.0.7")
     implementation("org.codehaus.janino:janino:3.0.7")
     implementation("starfarer:starfarer-api:1.0.0") // This grabs local files from the /libs folder, see `repositories` block.
+    compileOnly("agc:AdvancedGunneryControl:1.6.1")
 
     // If the above fails, uncomment this line to use the dependencies in starsector-core instead of getting them from The Internet.
     // compileOnly(fileTree(starsectorCoreDirectory) { include("**/*.jar") })
@@ -79,7 +80,7 @@ dependencies {
     if (File(starsectorModDirectory).exists()) {
         compileOnly(fileTree(starsectorModDirectory) {
             include("**/*.jar")
-            exclude("**/$jarFileName", "**/lib/*", "**/libs/*")
+            exclude("**/$jarFileName", "**/lib/*", "**/libs/*", "starsector-advanced-weapon-control/*")
         })
     } else {
         println("$starsectorModDirectory did not exist, not adding mod folder dependencies.")
@@ -235,6 +236,10 @@ version = modVersion
 
 repositories {
     maven(url = uri("$projectDir/libs"))
+    // adding the jar like this helps the IDE find the relevant javadoc so that it can display
+    // inline doc.
+    // If you simply want to import the jar, feel free to import it via File
+    maven(url = uri("$starsectorModDirectory/starsector-advanced-weapon-control/jars"))
     mavenCentral()
 }
 

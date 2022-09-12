@@ -11,7 +11,9 @@ To see what the example GUI does, load this mod, enter combat and press the '+'-
 ## Step-by-step guide
 
 1. Include AGC as a dependency in your mod_info.json
-   1. Load AdvancedGunneryControl.jar as a library. If you are using Wisp's template (which I highly recommend), this will happen automatically.
+   1. Load AdvancedGunneryControl.jar as a library.
+      1. If you are using Wisp's template (highly recommended), look at the build.gradle.kts file in this example to see how to load it as a library
+      2. Alternatively, just add the jar-files in AdvancedGunneryControl/jars/agc/AdvancedGunneryControl/<version> to your IDE
    2. If you don't want your mod to have AGC as a dependency, I am also fine with you copy-pasting the combat gui lib into your mod, but please change the package name in that case (to avoid version conflicts).
       1. Don't forget to comply with the license in that case. As it's MIT-licensed, that should be easy enough, you just have to include the license notice in your mod.
 2. Create a new class that extends com.dp.advancedgunnerycontrol.combatgui.GuiBase
