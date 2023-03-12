@@ -1,3 +1,4 @@
+import org.apache.tools.ant.taskdefs.condition.Os
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 //
@@ -13,7 +14,7 @@ val modName = "TestCombatGui"
  * Where your Starsector game is installed to.
  * Note: On Linux, if you installed Starsector into your home directory, you have to write /home/<user>/ instead of ~/
  */
-val starsectorDirectory = "D:/Spiele/Starsector"
+val starsectorDirectory = "/home/jannes/games/starsector"
 
 /** Defaults to the name of your mod, with spaces replaced by hyphens. */
 val modFolderName = modName.replace(" ", "-")
@@ -43,7 +44,7 @@ val modThreadId = "00000"
 // ==============
 // ==== SECTION C: Game paths, probably won't need to change these unless you're on Unix ====
 // Note: On Linux, change the below line to `val starsectorCoreDirectory = "${starsectorDirectory}"`
-val starsectorCoreDirectory = "${starsectorDirectory}/starsector-core"
+val starsectorCoreDirectory = if(Os.isFamily(Os.FAMILY_WINDOWS)) "${starsectorDirectory}/starsector-core" else starsectorDirectory
 val starsectorModDirectory = "${starsectorDirectory}/mods"
 val modInModsFolder = File("$starsectorModDirectory/${modFolderName}")
 
@@ -66,7 +67,7 @@ dependencies {
     implementation("net.java.jinput:jinput:2.0.7")
     implementation("org.codehaus.janino:janino:3.0.7")
     implementation("starfarer:starfarer-api:1.0.0") // This grabs local files from the /libs folder, see `repositories` block.
-    compileOnly("agc:AdvancedGunneryControl:1.6.1")
+    compileOnly("agc:AdvancedGunneryControl:1.7.1")
 
     // If the above fails, uncomment this line to use the dependencies in starsector-core instead of getting them from The Internet.
     // compileOnly(fileTree(starsectorCoreDirectory) { include("**/*.jar") })
@@ -239,7 +240,7 @@ repositories {
     // adding the jar like this helps the IDE find the relevant javadoc so that it can display
     // inline doc.
     // If you simply want to import the jar, feel free to import it via File
-    maven(url = uri("$starsectorModDirectory/starsector-advanced-weapon-control/jars"))
+    maven(url = uri("$starsectorModDirectory/AdvancedGunneryControl/jars"))
     mavenCentral()
 }
 

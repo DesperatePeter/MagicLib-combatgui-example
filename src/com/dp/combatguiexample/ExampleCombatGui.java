@@ -6,8 +6,6 @@ import com.dp.advancedgunnerycontrol.combatgui.buttongroups.CreateSimpleButtons;
 import com.dp.advancedgunnerycontrol.combatgui.buttongroups.DataButtonGroup;
 import com.dp.advancedgunnerycontrol.combatgui.buttongroups.RadioButtonRefreshAction;
 import org.jetbrains.annotations.Nullable;
-import org.lazywizard.lazylib.combat.CombatUtils;
-import wisp.questgiver.Questgiver;
 
 import java.awt.*;
 import java.util.Arrays;
