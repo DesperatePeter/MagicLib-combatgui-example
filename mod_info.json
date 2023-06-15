@@ -5,7 +5,7 @@
     "utility": "false",
     "version": { "major":"1", "minor": "0", "patch": "0" },
     "description": "Test/Showcase for using combat GUI",
-    "gameVersion": "0.95.1a-RC6",
+    "gameVersion": "0.96a-RC10",
     "jars":["jars/TestCombatGui.jar"],
     "dependencies": [
         {
