@@ -67,7 +67,6 @@ dependencies {
     implementation("net.java.jinput:jinput:2.0.7")
     implementation("org.codehaus.janino:janino:3.0.7")
     implementation("starfarer:starfarer-api:1.0.0") // This grabs local files from the /libs folder, see `repositories` block.
-    compileOnly("agc:AdvancedGunneryControl:1.7.1")
 
     // If the above fails, uncomment this line to use the dependencies in starsector-core instead of getting them from The Internet.
     // compileOnly(fileTree(starsectorCoreDirectory) { include("**/*.jar") })
