@@ -1,4 +1,4 @@
-# Combat GUI example
+# MagicLib Combat-GUI example
 
 ![Showcase](imgs/combatGuiLibUsageExample.gif)
 
