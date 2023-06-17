@@ -1,7 +1,7 @@
 {
     "id": "testCombatGui_test",
     "name": "Combat GUI test",
-    "author": "DesperatePeter",
+    "author": "Jannes AKA DesperatePeter",
     "utility": "false",
     "version": { "major":"1", "minor": "0", "patch": "0" },
     "description": "Test/Showcase for using combat GUI",
@@ -14,8 +14,9 @@
             # "version": "2.6" # If a specific version or higher is required, include this line
         },
         {
-            "id": "advanced_gunnery_control_dbeaa06e",
-            "name": "AdvancedGunneryControl"
+            "id": "MagicLib",
+            "name": "MagicLib",
+            "version": "1.2"
         }
     ]
 }
