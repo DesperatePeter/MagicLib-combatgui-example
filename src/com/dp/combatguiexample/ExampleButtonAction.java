@@ -1,6 +1,6 @@
 package com.dp.combatguiexample;
 
-import org.magiclib.kotlin.combatgui.buttons.ButtonAction;
+import org.magiclib.combatgui.buttons.ButtonAction;
 import com.fs.starfarer.api.Global;
 
 public class ExampleButtonAction implements ButtonAction {

@@ -1,6 +1,6 @@
 package com.dp.combatguiexample;
 
-import org.magiclib.kotlin.combatgui.buttongroups.ButtonGroupAction;
+import org.magiclib.combatgui.buttongroups.ButtonGroupAction;
 import com.fs.starfarer.api.Global;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

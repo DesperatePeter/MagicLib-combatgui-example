@@ -49,7 +49,7 @@ dependencies {
     if (File(starsectorModDirectory).exists()) {
         compileOnly(fileTree(starsectorModDirectory) {
             include("**/*.jar")
-            exclude("**/$jarFileName", "**/lib/*", "**/libs/*", "starsector-advanced-weapon-control/*")
+            exclude("**/$jarFileName", "**/lib/*", "**/libs/*")
         })
     } else {
         println("$starsectorModDirectory did not exist, not adding mod folder dependencies.")
