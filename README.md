@@ -6,6 +6,13 @@ This is a showcase of how to use the MagicLib combatgui module.
 
 Note that that module is written in Kotlin, but can be imported and used in Java code just like regular Java modules.
 
+## Combat GUI as campaign GUI branch
+
+You are on the branch which shows you how you can use the combat GUI as a campaign GUI.
+All the relevant stuff is in the package com.dp.abuseascampagingui.
+This is not the intended use case, but still possible to do, if you e.g. want to use the same
+GUI code in combat and on the campaign layer.
+
 ## Why use a combat GUI?
 
 Most mods probably won't need a combat GUI. But if you ever want to present multiple options to the player during combat,

@@ -7,6 +7,7 @@
     "description": "Test/Showcase for using combat GUI",
     "gameVersion": "0.96a-RC10",
     "jars":["jars/TestCombatGui.jar"],
+    "modPlugin":"com.dp.abuseascampagingui.UiBasePlugin",
     "dependencies": [
         {
             "id": "lw_lazylib",
