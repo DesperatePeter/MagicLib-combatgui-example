@@ -298,3 +298,11 @@ For now at least, more advanced topics will not be covered in this document. I b
 will use those to justify the effort of writing documentation about them. Instead, please feel free to DM or mention me
 on the unofficial Starsector Discord or the MagicLib Discord (@desperatepeter) if you are interested in using advanced
 features and need assistance.
+
+## Using the combat GUI on the campaign layer
+
+While the combatgui is intended to be used in-combat, you can also use it on the campaign layer.
+This is mainly relevant if you want to be able to use the exact same GUI-code both in combat and on the campaign
+layer. Check out the branch combat-gui in this repo for an example.
+That example assumes that you are at least somewhat familiar with campaign GUIs and won't be as detailed as
+the combat gui example.
