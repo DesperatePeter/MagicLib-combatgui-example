@@ -6,7 +6,13 @@ This is a showcase of how to use the MagicLib combatgui module.
 
 Note that that module is written in Kotlin, but can be imported and used in Java code just like regular Java modules.
 
-## Why use a combat GUI?
+## Introduction
+
+Feel free to skip this section if you just want to know how to use the GUI module.
+
+If you prefer to learn via code, simply look at the contents of the source folder, starting with ExampleCombatGui.
+
+### Why use a combat GUI?
 
 Most mods probably won't need a combat GUI. But if you ever want to present multiple options to the player during combat,
 a GUI is a nice way to do so.
@@ -16,8 +22,6 @@ a GUI is probably a more elegant solution.
 Maybe you want to create a mod, where the player can issue more advanced commands to the fleet or to fighters
 from the flagship (please do! Those would be cool! :P)? A GUI would probably be easier to use than a ton of keyboard
 shortcuts.
-
-## Introduction
 
 The relevant files are everything in src and data/config/settings.json. The rest is just here to make the build, repo and mod work.
 If you already have a mod set up and want to use the combatgui in that mod, you can ignore all that stuff.
@@ -37,26 +41,28 @@ You can find the Javadoc documentation for the classes in the combatgui module h
 
 ## Quick step-by-step guide
 
+Each step will be detailed in a further chapter.
+
 1. Include MagicLib as a dependency in your mod_info.json
    1. cf. <https://fractalsoftworks.com/forum/index.php?topic=25868.0> for details
-2. Create a new class that extends org.magiclib.kotlin.combatgui.GuiBase
-   1. Override the method getTitleString with a title to display when the GUI is opened
-   2. (optional) Override getMessageString if you want to display general messages. Feel free to put logic in here that changes the message based on context
-   3. In the constructor, call super and pass it a new GuiLayout to define fonts, colors and positions
-   4. Afterwards, call the addButton and addButtonGroup methods in the constructor to create actual buttons
-      1. you will need to define actions by implementing the ButtonAction and ButtonGroupAction interfaces
-      2. For button groups, you will also need a CreateButtonsAction (or use the CreateSimpleButtons class)
-      3. You can also define a RefreshAction, or simply pass null
+2. Create a new class that extends org.magiclib.combatgui.GuiBase
+   1. Override the methods getTitleString and getMessageString
+   2. In the constructor, call super and pass it a new GuiLayout to define fonts, colors and positions
+   3. Afterwards, call the addButton and addButtonGroup methods in the constructor to create actual buttons
+      1. you will need to pass actions that define what happens when a button gets clicked 
+         1. Implement the ButtonAction and ButtonGroupAction interfaces
+      2. For button groups, you will also need to pass a CreateButtonsAction 
+         1. you can use the CreateSimpleButtons class or implement the interface yourself
 3. Create a GUI-Launcher class that creates a new GUI object when a certain condition is met and deletes it again afterwards
    1. If you simply want to open/close the GUI when a hotkey is pressed, you can extend the SampleGuiLauncher class
    2. If your mod already has a EveryFramePlugin, feel free to implement the logic there instead
 4. Register the GUI-launcher as a plugin to load in data/config/settings.json (or mod_info.json)
-5. Additional documentation in the MagicLib-Repo will follow
 
 ## Creating a GUI class
 
 This will form the basis of any kind of GUI you want to create. Have a look at the file 
-src/com/dp/combatguiexample/ExampleCombatGui.java to see an example implementation.
+<https://github.com/DesperatePeter/MagicLib-combatgui-example/blob/master/src/com/dp/combatguiexample/ExampleCombatGui.java>
+to see an example implementation.
 
 Create a new class that extends org.magiclib.kotlin.combatgui.GuiBase.
 You will need to overwrite two methods and implement a constructor for your GUI.
@@ -97,7 +103,7 @@ super(
         5f, // padding in pixels, i.e. distance between two buttons
         0.4f, // relative screen x position where hover tooltips (when a user hovers over a button) will be displayed 
         0.2f, // relative screen y position for tooltips
-        25f, // space in pixels to allocate in pixels. Should be ~1.5-2 times font size. Setting it to 0 would display the title at the same position as the first button row      
+        25f, // space in pixels to allocate for a line of text. Should be ~1.5-2 times font size. Setting it to 0 would display the title at the same position as the first button row      
        "graphics/fonts/insignia15LTaa.fnt", // font to use. Have a look at graphics/fonts in Starsector directory for options
         0.4f, // relative screen x position where messages will be displayed
         0.4f // relative screen y position for messages
@@ -203,7 +209,7 @@ CreateButtonsAction. Implement the interface CreateButtonsAction and override th
 In that method, call group.addButton for each button you want to create. You will need to pass the name, data and tooltip text to that method:
 
 ```java
-class CreateSimpleButtons implements CreateButtonsAction {
+class CreateMyButtons implements CreateButtonsAction {
     @Override
     void createButtons(DataButtonGroup group) {
         Boolean someCondition = false; // some condition, probably should be set from somewhere else
