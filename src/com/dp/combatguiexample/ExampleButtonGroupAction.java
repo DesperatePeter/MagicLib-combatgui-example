@@ -1,13 +1,13 @@
 package com.dp.combatguiexample;
 
-import org.magiclib.combatgui.buttongroups.ButtonGroupAction;
+import org.magiclib.combatgui.buttongroups.MagicCombatButtonGroupAction;
 import com.fs.starfarer.api.Global;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class ExampleButtonGroupAction implements ButtonGroupAction {
+public class ExampleButtonGroupAction implements MagicCombatButtonGroupAction {
     @Override
     public void execute(@NotNull List<?> data, @Nullable Object selectedButtonData, @Nullable Object unselectedButtonData) {
         Global.getLogger(this.getClass()).info("A button in the button group was clicked. Button group data:");

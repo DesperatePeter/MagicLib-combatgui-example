@@ -1,22 +1,22 @@
 package com.dp.combatguiexample;
 
-import org.magiclib.combatgui.GuiBase;
-import org.magiclib.combatgui.GuiLayout;
-import org.magiclib.combatgui.buttongroups.CreateSimpleButtons;
-import org.magiclib.combatgui.buttongroups.DataButtonGroup;
-import org.magiclib.combatgui.buttongroups.RadioButtonRefreshAction;
+import org.magiclib.combatgui.MagicCombatGuiBase;
+import org.magiclib.combatgui.MagicCombatGuiLayout;
+import org.magiclib.combatgui.buttongroups.MagicCombatCreateSimpleButtons;
+import org.magiclib.combatgui.buttongroups.MagicCombatDataButtonGroup;
+import org.magiclib.combatgui.buttongroups.MagicCombatRadioButtonRefreshAction;
 import org.jetbrains.annotations.Nullable;
 
 import java.awt.*;
 import java.util.Arrays;
 
-public class ExampleCombatGui extends GuiBase {
+public class ExampleCombatGui extends MagicCombatGuiBase {
     public ExampleCombatGui(){
 
         // pass new GuiLayout(...) to customize the position/size/color of stuff
         // you can alternatively just call super() to use the default layout, but I wouldn't recommend that.
         super(
-                new GuiLayout(0.05f, 0.8f, 100f, 20f, 0.5f,
+                new MagicCombatGuiLayout(0.05f, 0.8f, 100f, 20f, 0.5f,
                 Color.WHITE,5f, 0.4f, 0.2f, 25f,
                 "graphics/fonts/insignia15LTaa.fnt", 0.4f, 0.4f)
         );
@@ -28,7 +28,7 @@ public class ExampleCombatGui extends GuiBase {
         // by passing null/null as data/tooltips, the button data will be equal to the button name and there won't be any tooltips
         addButtonGroup(
                 new ExampleButtonGroupAction(),
-                new CreateSimpleButtons(
+                new MagicCombatCreateSimpleButtons(
                         Arrays.asList("button1", "button2"),
                         null,
                         null
@@ -42,12 +42,12 @@ public class ExampleCombatGui extends GuiBase {
         // be active at a time (in this case, triggeringButtonData should be used in the ButtonGroupAction)
         addButtonGroup(
                 new ExampleButtonGroupAction(),
-                new CreateSimpleButtons(
+                new MagicCombatCreateSimpleButtons(
                         Arrays.asList("AnotherBtn", "Foo"),
                         Arrays.asList(15, 27),
                         Arrays.asList("example tooltip", "Bar")
                 ),
-                new RadioButtonRefreshAction(), "Another example button group"
+                new MagicCombatRadioButtonRefreshAction(), "Another example button group"
         );
     }
 
